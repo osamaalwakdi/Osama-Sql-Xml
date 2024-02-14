@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Users" EntityNamespace="UserContext" ContextNamespace="UserContext" Class="UserDataContext" xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ed:Guid="60646ee2-915b-451c-aa7e-50c0be27980b" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="ConnectionString" ConnectionString="Data Source=DESKTOP-N0V2CA2\OSAMASERVER;Initial Catalog=Users;Integrated Security=True;Persist Security Info=True" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.userstable" Member="Userstables">
+    <Type Name="Userstable" ed:Guid="ed8b7f1b-c899-47bf-af26-71b040e887df">
+      <Column Name="username" Member="Username" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Always" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="882471a4-a463-4fec-a140-4b4ceb6c1a16" />
+      <Column Name="password" Member="Password" Type="System.String" DbType="NVARCHAR(50)" CanBeNull="true" UpdateCheck="Always" MaxLength="50" Unicode="true" ed:ValidateMaxLength="50" ed:ValidateRequired="false" ed:Guid="b8a26d01-1135-4a14-93ac-0a6a4982cd7c" />
+    </Type>
+  </Table>
+  <Function Name="dbo.Osa_Login" Method="OsaLogin" ed:Guid="067010f8-0f65-43d8-b010-1547ea94d794">
+    <Parameter Name="username" Type="System.String" DbType="NVARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="password" Type="System.String" DbType="NVARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <ElementType Name="OsaLoginResult">
+      <Column Name="column0" Member="Column0" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" />
+    </ElementType>
+    <ElementType Name="OsaLoginResult1">
+      <Column Name="column0" Member="Column0" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.Osa_Loginuser" Method="OsaLoginuser" ed:Guid="1ab81617-7e8f-4893-9163-0fcd13521333">
+    <Parameter Name="username" Type="System.String" DbType="NVARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <Parameter Name="password" Type="System.String" DbType="NVARCHAR(50)" FixedLength="true" MaxLength="50" />
+    <ElementType Name="OsaLoginuserResult">
+      <Column Name="column0" Member="Column0" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" />
+    </ElementType>
+    <ElementType Name="OsaLoginuserResult1">
+      <Column Name="column0" Member="Column0" Type="System.Int32" DbType="INT NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>
